@@ -1,0 +1,201 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+
+/* =========================
+   VARIABLES (EASY TO EDIT)
+========================= */
+:root {
+    --section-padding: 120px;
+    --primary-bg: #111;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --accent-color: #4e73ff;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   SECTION BASE STYLE
+========================= */
+section {
+    min-height: 100vh;
+    padding-top: var(--section-padding);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Each section different background color */
+.about-me {
+    background: #121212;
+}
+
+.experience {
+    background: #1a1a1a;
+}
+
+.skills {
+    background: #181818;
+}
+
+.contact {
+    background: #202020;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+    font-family: "Bungee Spice", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-me-content {
+    max-width: 800px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.about-me-img {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+.experience ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.experience li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.skills-container img {
+    width: 140px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.skills-container img:hover {
+    transform: translateY(-8px);
+    background: #333;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+.contact-container {
+    background: #2a2a2a;
+    padding: 50px 40px;
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #3559e0;
+}
+
+
+/* =========================
+   SCROLL FIX FOR NAVBAR
+========================= */
+section {
+    scroll-margin-top: 120px;
+}
